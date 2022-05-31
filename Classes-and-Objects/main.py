@@ -1,7 +1,25 @@
+from unicodedata import name
+
+
 class Student:
     # [assignment] Skeleton class. Add your code here
-    def __init__(self):
-        pass
+    def __init__(self, name, age, tracks, score):
+       self.name = name
+       self.age = age
+       self.tracks = tracks
+       self.score = score
+
+    def change_name(self):
+        print('I am '+ self.name)
+    
+    def change_age(self):
+        print('I am ', self.age)
+    
+    def add_track(self):
+        print('I am ', self.tracks)
+    
+    def get_score(self):
+        print('I am ', self.score)
 
 
 
