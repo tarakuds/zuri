@@ -12,7 +12,7 @@ def read_file_content(filename):
     fileOpen.close()
     print(viewFile)
         
-    return "Hello World"
+    return viewFile
 
 read_file_content('testing.txt')   
 
@@ -21,4 +21,14 @@ def count_words():
     text = read_file_content("./testing.txt")
     # [assignment] Add your code here
 
-    return {"as": 10, "would": 20}
+    wordSplit = text.split()
+    count = {}
+    for a in wordSplit:
+        if a in count:
+            count[a] += 1
+        else:
+            count[a] =1 
+        print(count)
+    return count
+
+count_words()
