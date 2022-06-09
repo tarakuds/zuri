@@ -9,24 +9,25 @@ class Student:
        self.tracks = tracks
        self.score = score
 
-    def change_name(self):
-        print('I am '+ self.name)
-    
-    def change_age(self):
-        print('I am ', self.age)
-    
-    def add_track(self):
-        print('I am ', self.tracks)
-    
-    def get_score(self):
-        print('I am ', self.score)
-
-
-
-Bob = Student(name="Bob", age=26, tracks=["FE","BE"],score=20.90)
-
 # Expected methods
-Bob.change_name("Peter")
+    def change_name(self, name):
+        self.name = name
+        print('My name has been changed to  '+ name)
+        
+    def change_age(self, age):
+        print('I am ', self.age)
+        
+    def add_track(self, tracks):
+        print('I am ', self.tracks)
+        
+    def get_score(self, score):
+        score = 20.99
+        print('I am ', self.score)
+        return score
+
+Bob = Student(name="Bob", age=26, tracks=["FE","BE"], score=20.89)
+
+Bob.change_name(name="Peter")
 Bob.change_age(34)
 Bob.add_track("UI/UX")
-Bob.get_score()
+Bob.get_score(59.5)
